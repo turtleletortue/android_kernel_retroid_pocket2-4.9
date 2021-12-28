@@ -76,6 +76,7 @@ static void disable_micbias(unsigned long a);
 #define EINT_PIN_PLUG_IN        (1)
 #define EINT_PIN_PLUG_OUT       (0)
 int cur_eint_state = EINT_PIN_PLUG_OUT;
+int cur_eint_state2 = EINT_PIN_PLUG_OUT;
 struct pinctrl *accdet_pinctrl1;
 struct pinctrl_state *pins_eint_int;
 static struct work_struct accdet_disable_work;
@@ -624,6 +625,34 @@ int accdet_irq_handler(void)
 
 	return 1;
 }
+
+/* Pull from Retroid kernel */
+struct pinctrl_state *pinctrlio63_output0 = 0, *pinctrlio63_output1 = 0;
+struct pinctrl *pinctrlio63;
+
+void accdet_speaker_enable(int state)
+{
+	if(pinctrlio63_output1 == 0 || pinctrlio63_output0 == 0)
+		return;
+	if (state == EINT_PIN_PLUG_OUT){
+		pinctrl_select_state(pinctrlio63, pinctrlio63_output1);
+	}
+	else{
+		pinctrl_select_state(pinctrlio63, pinctrlio63_output0);
+	}
+}
+
+void speaker_power(unsigned int on)
+{
+	extern int get_hdmi_state(void);
+
+	if (on == 0)
+		accdet_speaker_enable(EINT_PIN_PLUG_IN);
+	else if (cur_eint_state2 == EINT_PIN_PLUG_OUT && get_hdmi_state() != 1)
+		accdet_speaker_enable(EINT_PIN_PLUG_OUT);
+}
+EXPORT_SYMBOL(speaker_power);
+/* End pull from Retroid kernel */
 
 /*clear ACCDET IRQ in accdet register*/
 static inline void clear_accdet_interrupt(void)
