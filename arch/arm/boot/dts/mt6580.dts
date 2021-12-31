@@ -1969,7 +1969,7 @@
 	};
 	mmc1_pins_insert_cfg: mmc1_ins_cfg {
 		pins_insert {
-			pins = <PINMUX_GPIO3__FUNC_EINT3>;
+			pinmux = <PINMUX_GPIO3__FUNC_EINT3>;
 			input-schmitt-enable =<1>;
 			slew-rate = <0>;
 			bias-pull-up =<00>;
@@ -2030,7 +2030,7 @@
 &pio {
 	alsps_intpin_cfg: alspspincfg {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO6__FUNC_EINT6>;
+			pinmux = <PINMUX_GPIO6__FUNC_EINT6>;
 			slew-rate = <0>;
 			bias-pull-up = <00>;
 		};
@@ -2039,7 +2039,7 @@
 	};
 	gyro_intpin_cfg: gyropincfg {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO1__FUNC_GPIO1>;
+			pinmux = <PINMUX_GPIO1__FUNC_GPIO1>;
 			slew-rate = <0>;
 			bias-pull-down = <00>;
 		};
@@ -2087,35 +2087,35 @@
 	};
 	ctp_pins_eint_as_int: toucheint@5 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO5__FUNC_EINT5>;
+			pinmux = <PINMUX_GPIO5__FUNC_EINT5>;
 			slew-rate = <0>;
 			bias-disable;
 		};
 	};
 	ctp_pins_eint_output0: eintoutput0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO5__FUNC_GPIO5>;
+			pinmux = <PINMUX_GPIO5__FUNC_GPIO5>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	ctp_pins_eint_output1: eintoutput1 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO5__FUNC_GPIO5>;
+			pinmux = <PINMUX_GPIO5__FUNC_GPIO5>;
 			slew-rate = <1>;
 			output-high;
 		};
 	};
 	ctp_pins_rst_output0: rstoutput0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO2__FUNC_GPIO2>;
+			pinmux = <PINMUX_GPIO2__FUNC_GPIO2>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	ctp_pins_rst_output1: rstoutput1 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO2__FUNC_GPIO2>;
+			pinmux = <PINMUX_GPIO2__FUNC_GPIO2>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2139,36 +2139,36 @@
 	};
 	AUD_pins_pmicclk_mode0: pmicclkmode0 {
 		pins_cmd0_dat {
-			pins = <PINMUX_GPIO26__FUNC_GPIO26>;
+			pinmux = <PINMUX_GPIO26__FUNC_GPIO26>;
 		};
 		pins_cmd1_dat {
-			pins = <PINMUX_GPIO28__FUNC_GPIO28>;
+			pinmux = <PINMUX_GPIO28__FUNC_GPIO28>;
 		};
 		pins_cmd2_dat {
-			pins = <PINMUX_GPIO27__FUNC_GPIO27>;
+			pinmux = <PINMUX_GPIO27__FUNC_GPIO27>;
 		};
 	};
 	AUD_pins_pmicclk_mode1: pmicclkmode1 {
 		pins_cmd0_dat {
-			pins = <PINMUX_GPIO26__FUNC_AUD_CLK_MOSI>;
+			pinmux = <PINMUX_GPIO26__FUNC_AUD_CLK_MOSI>;
 		};
 		pins_cmd1_dat {
-			pins = <PINMUX_GPIO28__FUNC_AUD_DAT_MISO>;
+			pinmux = <PINMUX_GPIO28__FUNC_AUD_DAT_MISO>;
 		};
 		pins_cmd2_dat {
-			pins = <PINMUX_GPIO27__FUNC_AUD_DAT_MOSI>;
+			pinmux = <PINMUX_GPIO27__FUNC_AUD_DAT_MOSI>;
 		};
 	};
 	extamp_pins_output0: extampoutput0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO18__FUNC_GPIO18>;
+			pinmux = <PINMUX_GPIO18__FUNC_GPIO18>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	extamp_pins_output1: extampoutput1 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO18__FUNC_GPIO18>;
+			pinmux = <PINMUX_GPIO18__FUNC_GPIO18>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2181,19 +2181,19 @@
 
 	mtkfb_pins_mode_te_gpio: mode_te_gpio {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO68__FUNC_GPIO68>;
+			pinmux = <PINMUX_GPIO68__FUNC_GPIO68>;
 		};
 	};
 
 	mtkfb_pins_mode_te_te: mode_te_te {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO68__FUNC_DSI_TE>;
+			pinmux = <PINMUX_GPIO68__FUNC_DSI_TE>;
 		};
 	};
 
 	mtkfb_pins_lcm_reset0: lcm_rst_out0_gpio {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO70__FUNC_LCM_RST>;
+			pinmux = <PINMUX_GPIO70__FUNC_LCM_RST>;
 			slew-rate = <1>;
 			output-low;
 		};
@@ -2201,7 +2201,7 @@
 
 	mtkfb_pins_lcm_reset1: lcm_rst_out1_gpio {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO70__FUNC_LCM_RST>;
+			pinmux = <PINMUX_GPIO70__FUNC_LCM_RST>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2209,7 +2209,7 @@
 
 	mtkfb_pins_pwm_test_pin_mux_gpio66: pwm_test_pin_mux_gpio66 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO66__FUNC_DISP_PWM>;
+			pinmux = <PINMUX_GPIO66__FUNC_DISP_PWM>;
 			slew-rate = <1>;
 		};
 	};
@@ -2235,42 +2235,42 @@
 &pio {
 	camera_pins_cam0_rst0: cam0@0 {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO73__FUNC_GPIO73>;/*GPIO_CAMERA_CMRST_PIN*/
+			pinmux = <PINMUX_GPIO73__FUNC_GPIO73>;/*GPIO_CAMERA_CMRST_PIN*/
 			slew-rate = <1>; /*direction 0:in, 1:out*/
 			output-low;/*direction out used only. output_low or high*/
 		};
 	};
 	camera_pins_cam0_rst1: cam0@1 {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO73__FUNC_GPIO73>;/*GPIO_CAMERA_CMRST_PIN*/
+			pinmux = <PINMUX_GPIO73__FUNC_GPIO73>;/*GPIO_CAMERA_CMRST_PIN*/
 			slew-rate = <1>;
 			output-high;
 		};
 	};
 	camera_pins_cam0_pnd0: cam0@2 {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO71__FUNC_GPIO71>;/*GPIO_CAMERA_CMPDN_PIN*/
+			pinmux = <PINMUX_GPIO71__FUNC_GPIO71>;/*GPIO_CAMERA_CMPDN_PIN*/
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	camera_pins_cam0_pnd1: cam0@3 {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO71__FUNC_GPIO71>;/*GPIO_CAMERA_CMPDN_PIN*/
+			pinmux = <PINMUX_GPIO71__FUNC_GPIO71>;/*GPIO_CAMERA_CMPDN_PIN*/
 			slew-rate = <1>;
 			output-high;
 		};
 	};
 	camera_pins_cam1_rst0: cam1@0 {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO76__FUNC_GPIO76>;/*GPIO_CAMERA_CMRST1_PIN*/
+			pinmux = <PINMUX_GPIO76__FUNC_GPIO76>;/*GPIO_CAMERA_CMRST1_PIN*/
 			slew-rate = <1>; /*direction 0:in, 1:out*/
 			output-low;/*direction out used only. output_low or high*/
 		};
 	};
 	camera_pins_cam1_rst1: cam1@1 {
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO76__FUNC_GPIO76>;/*GPIO_CAMERA_CMRST1_PIN*/
+			pinmux = <PINMUX_GPIO76__FUNC_GPIO76>;/*GPIO_CAMERA_CMRST1_PIN*/
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2284,59 +2284,59 @@
 	};
 	camera_pins_cam1_gpio_serial: cam1serial@0{
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO35__FUNC_CMCSK>;
+			pinmux = <PINMUX_GPIO35__FUNC_CMCSK>;
 		};
 	    pins_cmd_dat1 {
-			pins = <PINMUX_GPIO36__FUNC_CMCSD0>;
+			pinmux = <PINMUX_GPIO36__FUNC_CMCSD0>;
 		};
 	    pins_cmd_dat2 {
-			pins = <PINMUX_GPIO37__FUNC_CMCSD1>;
+			pinmux = <PINMUX_GPIO37__FUNC_CMCSD1>;
 		};
 	    pins_cmd_dat3 {
-			pins = <PINMUX_GPIO38__FUNC_CMCSD2>;
+			pinmux = <PINMUX_GPIO38__FUNC_CMCSD2>;
 		};
 	    pins_cmd_dat4 {
-			pins = <PINMUX_GPIO39__FUNC_CMCSD3>;
+			pinmux = <PINMUX_GPIO39__FUNC_CMCSD3>;
 		};
 	};
 	camera_pins_cam1_gpio_mipi: cam1mipi@0{
 	    pins_cmd_dat {
-			pins = <PINMUX_GPIO35__FUNC_PAD_RDP0_A>;
+			pinmux = <PINMUX_GPIO35__FUNC_PAD_RDP0_A>;
 		};
 	    pins_cmd_dat1 {
-			pins = <PINMUX_GPIO36__FUNC_PAD_RDN0_A>;
+			pinmux = <PINMUX_GPIO36__FUNC_PAD_RDN0_A>;
 		};
 	    pins_cmd_dat2 {
-			pins = <PINMUX_GPIO37__FUNC_PAD_RDP1_A>;
+			pinmux = <PINMUX_GPIO37__FUNC_PAD_RDP1_A>;
 		};
 	    pins_cmd_dat3 {
-			pins = <PINMUX_GPIO38__FUNC_PAD_RDN1_A>;
+			pinmux = <PINMUX_GPIO38__FUNC_PAD_RDN1_A>;
 		};
 	    pins_cmd_dat4 {
-			pins = <PINMUX_GPIO39__FUNC_PAD_RCP_A>;
+			pinmux = <PINMUX_GPIO39__FUNC_PAD_RCP_A>;
 		};
 	    pins_cmd_dat5 {
-			pins = <PINMUX_GPIO40__FUNC_PAD_RCN_A>;
+			pinmux = <PINMUX_GPIO40__FUNC_PAD_RCN_A>;
 		};
 	};
 	camera_pins_cam_mclk1_enable: mclk1enable@0{
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO72__FUNC_CAM_CLK0>;
+			pinmux = <PINMUX_GPIO72__FUNC_CAM_CLK0>;
 		};
 	};
 	camera_pins_cam_mclk1_disable: mclk1disable@0{
 	   pins_cmd_dat {
-			pins = <PINMUX_GPIO72__FUNC_GPIO72>;
+			pinmux = <PINMUX_GPIO72__FUNC_GPIO72>;
 		};
 	};
 	camera_pins_cam_mclk2_enable: mclk2enable@0{
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO75__FUNC_CAM_CLK1>;
+			pinmux = <PINMUX_GPIO75__FUNC_CAM_CLK1>;
 		};
 	};
 	camera_pins_cam_mclk2_disable: mclk2disable@0{
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO75__FUNC_GPIO75>;
+			pinmux = <PINMUX_GPIO75__FUNC_GPIO75>;
 		};
 	};
 
@@ -2378,7 +2378,7 @@
 	gpslna_pins_init: gpslna@0 {
 
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO67__FUNC_GPIO67>;
+			pinmux = <PINMUX_GPIO67__FUNC_GPIO67>;
 			slew-rate = <0>;
 			bias-disable;
 			output-low;
@@ -2388,7 +2388,7 @@
 	gpslna_pins_oh: gpslna@1 {
 
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO67__FUNC_GPIO67>;
+			pinmux = <PINMUX_GPIO67__FUNC_GPIO67>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2397,7 +2397,7 @@
 	gpslna_pins_ol: gpslna@2 {
 
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO67__FUNC_GPIO67>;
+			pinmux = <PINMUX_GPIO67__FUNC_GPIO67>;
 			slew-rate = <1>;
 			output-low;
 		};
@@ -2419,7 +2419,7 @@
 &pio {
 	fpga_pwr2pin_on: config2 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO16__FUNC_GPIO16>;
+			pinmux = <PINMUX_GPIO16__FUNC_GPIO16>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2427,7 +2427,7 @@
 	
 	fpga_pwr2pin_off: config3 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO16__FUNC_GPIO16>;
+			pinmux = <PINMUX_GPIO16__FUNC_GPIO16>;
 			slew-rate = <1>;
 			output-low;
 		};
@@ -2435,7 +2435,7 @@
 	
 	lcm_vs_enpin_on: config4 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO74__FUNC_GPIO74>;
+			pinmux = <PINMUX_GPIO74__FUNC_GPIO74>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2443,7 +2443,7 @@
 	
 	lcm_vs_enpin_off: config5 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO74__FUNC_GPIO74>;
+			pinmux = <PINMUX_GPIO74__FUNC_GPIO74>;
 			slew-rate = <1>;
 			output-low;
 		};
@@ -2451,7 +2451,7 @@
 	
 	uart_tx: config6 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO7__FUNC_UTXD2>;
+			pinmux = <PINMUX_GPIO7__FUNC_UTXD2>;
 			slew-rate = <1>;
 			bias-disable;
 			bias-pull-down = <00>;
@@ -2462,7 +2462,7 @@
 
 	uart_rx: config7 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO8__FUNC_URXD2>;
+			pinmux = <PINMUX_GPIO8__FUNC_URXD2>;
 			slew-rate = <0>;
 			
 			bias-pull-down = <11>;
@@ -2473,7 +2473,7 @@
 	
 	hdmi_eint: config8 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO72__FUNC_EINT7>;
+			pinmux = <PINMUX_GPIO72__FUNC_EINT7>;
 			slew-rate = <0>;
 			
 			bias-pull-up = <11>;
@@ -2484,7 +2484,7 @@
 	
 	hdmi_boost_enpin_on: config9 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO19__FUNC_GPIO19>;
+			pinmux = <PINMUX_GPIO19__FUNC_GPIO19>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2492,7 +2492,7 @@
 	
 	hdmi_boost_enpin_off: config10 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO19__FUNC_GPIO19>;
+			pinmux = <PINMUX_GPIO19__FUNC_GPIO19>;
 			slew-rate = <1>;
 			output-low;
 		};
@@ -2506,28 +2506,28 @@
 	};
 	usb_iddig_irq_init: eint@9 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO9__FUNC_EINT9>;
+			pinmux = <PINMUX_GPIO9__FUNC_EINT9>;
 			slew-rate = <0>;
 			bias-pull-up = <00>;
 		};
 	};
 	usb_drvvbus_init: drvvbus_init {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO10__FUNC_USB_DRVVBUS>;
+			pinmux = <PINMUX_GPIO10__FUNC_USB_DRVVBUS>;
 			slew-rate = <1>;
 			bias-pull-up = <00>;
 		};
 	};
 	usb_drvvbus_low: drvvbus_low {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO10__FUNC_USB_DRVVBUS>;
+			pinmux = <PINMUX_GPIO10__FUNC_USB_DRVVBUS>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	usb_drvvbus_high: drvvbus_high {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO10__FUNC_USB_DRVVBUS>;
+			pinmux = <PINMUX_GPIO10__FUNC_USB_DRVVBUS>;
 			slew-rate = <1>;
 			output-high;
 		};
@@ -2608,7 +2608,7 @@
 &pio {
 	ACCDET_pins_eint_as_int: eint@0 {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO0__FUNC_EINT0>;
+			pinmux = <PINMUX_GPIO0__FUNC_EINT0>;
 			slew-rate = <0>;
 			bias-disable;
 			//bias-pull-up = <00>;
@@ -2616,14 +2616,14 @@
 	};
 	ACCDET_speaker_off: speaker_off {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO63__FUNC_GPIO63>;
+			pinmux = <PINMUX_GPIO63__FUNC_GPIO63>;
 			slew-rate = <1>;
 			output-low;
 		};
 	};
 	ACCDET_speaker_on: speaker_on {
 		pins_cmd_dat {
-			pins = <PINMUX_GPIO63__FUNC_GPIO63>;
+			pinmux = <PINMUX_GPIO63__FUNC_GPIO63>;
 			slew-rate = <1>;
 			output-high;
 		};
